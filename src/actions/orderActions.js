@@ -294,7 +294,7 @@ export const deleteOrder = (id) => async (dispatch, getState) => {
         },
       };
   
-      await axios.delete(`/api/orders/${id}/delete/`, config);
+      await axios.delete(`https://wasdgames.pythonanywhere.com/api/orders/${id}/delete/`, config);
   
       dispatch({ type: ORDER_DELETE_SUCCESS, payload: id });
   

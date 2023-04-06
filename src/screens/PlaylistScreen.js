@@ -36,7 +36,7 @@ function ProductScreen({ match, history }) {
   const [sdkReady, setSdkReady] = useState(false)
 
   const orderDetails = useSelector(state => state.orderDetails)
-  const { order} = orderDetails
+  const { order } = orderDetails || {}
 
   const orderPay = useSelector(state => state.orderPay)
   const { loading: loadingPay, success: successPay } = orderPay
