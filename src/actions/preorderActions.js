@@ -5,7 +5,7 @@ import {
 } from '../constants/preorderConstants';
 
 export const addToPreorder = (id, qty) => async (dispatch, getState) => {
-    const { data } = await axios.get(`/api/songs/${id}`);
+    const { data } = await axios.get(`https://wasdgames.pythonanywhere.com/api/songs/${id}`);
 
     dispatch({
         type: PREORDER_ADD_ITEM,

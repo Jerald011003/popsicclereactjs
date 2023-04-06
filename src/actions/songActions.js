@@ -36,7 +36,7 @@ export const listSongs = (keyword = '') => async (dispatch) => {
     try {
         dispatch({ type: SONG_LIST_REQUEST })
 
-        const { data } = await axios.get(`/api/songs${keyword}`)
+        const { data } = await axios.get(`https://wasdgames.pythonanywhere.com/api/songs${keyword}`)
 
         dispatch({
             type: SONG_LIST_SUCCESS,
@@ -57,7 +57,7 @@ export const listTopSongs = () => async (dispatch) => {
     try {
         dispatch({ type: SONG_TOP_REQUEST })
 
-        const { data } = await axios.get(`/api/songs/top/`)
+        const { data } = await axios.get(`https://wasdgames.pythonanywhere.com/api/songs/top/`)
 
         dispatch({
             type: SONG_TOP_SUCCESS,
@@ -79,7 +79,7 @@ export const listSongDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: SONG_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/songs/${id}`)
+        const { data } = await axios.get(`https://wasdgames.pythonanywhere.com/api/songs/${id}`)
 
         dispatch({
             type: SONG_DETAILS_SUCCESS,
@@ -115,7 +115,7 @@ export const deleteSong = (id) => async (dispatch, getState) => {
         }
 
         const { data } = await axios.delete(
-            `/api/songs/delete/${id}/`,
+            `https://wasdgames.pythonanywhere.com/api/songs/delete/${id}/`,
             config
         )
 
@@ -153,7 +153,7 @@ export const createSong = () => async (dispatch, getState) => {
         }
 
         const { data } = await axios.post(
-            `/api/songs/create/`,
+            `https://wasdgames.pythonanywhere.com/api/songs/create/`,
             {},
             config
         )
@@ -193,7 +193,7 @@ export const updateSong = (song) => async (dispatch, getState) => {
     }
 
     const { data } = await axios.put(
-        `/api/songs/update/${song._id}/`,
+        `https://wasdgames.pythonanywhere.com/api/songs/update/${song._id}/`,
         song,
         config
     )
@@ -231,7 +231,7 @@ export const createSongReview = (songId, review) => async (dispatch, getState) =
     }
 
     await axios.post(
-        `/api/songs/${songId}/reviews/`,
+        `https://wasdgames.pythonanywhere.com/api/songs/${songId}/reviews/`,
         review,
         config
     )

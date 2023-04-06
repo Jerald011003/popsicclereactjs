@@ -32,7 +32,7 @@ export const createPlaylist = (playlist) => async (dispatch, getState) => {
     formData.append('link', playlist.link);
 
 
-    const { data } = await axios.post(`/api/playlists/create/`, formData, config);
+    const { data } = await axios.post(`https://wasdgames.pythonanywhere.com/api/playlists/create/`, formData, config);
 
     dispatch({ type: PLAYLIST_CREATE_SUCCESS, payload: data });
 
@@ -63,7 +63,7 @@ export const listPlaylists = () => async (dispatch, getState) => {
       },
     };
 
-    const { data } = await axios.get(`/api/playlists/list/`, config);
+    const { data } = await axios.get(`https://wasdgames.pythonanywhere.com/api/playlists/list/`, config);
 
     dispatch({ type: PLAYLIST_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -91,7 +91,7 @@ export const deletePlaylist = (id) => async (dispatch, getState) => {
       },
     };
 
-    await axios.delete(`/api/playlists/${id}/`, config);
+    await axios.delete(`https://wasdgames.pythonanywhere.com/api/playlists/${id}/`, config);
 
     dispatch({ type: PLAYLIST_DELETE_SUCCESS, payload: id });
 
