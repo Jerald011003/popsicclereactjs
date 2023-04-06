@@ -51,7 +51,7 @@ const PlaylistScreen = ({ match, location, history }) => {
               <div className="p-3 border rounded">
                 <Image src={item.image} alt={item.name} fluid />
                 <div className="mt-3">
-                  <Link to={`/song/${item.song}`} className="fw-bold">
+                  <Link to={`/songs/${item.song}`} className="fw-bold">
                     {item.name}
                   </Link>
                 </div>
