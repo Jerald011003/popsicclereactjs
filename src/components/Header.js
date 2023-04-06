@@ -28,17 +28,17 @@ function Header({ match, history}) {
 
   return (
     <header>
-       <Helmet>
+       {/* <Helmet>
         <title>POPSICCLE</title>
         <link rel="icon" type="image/png" href="https://imgur.com/XDaKYpK.png" sizes="16x16" />
-      </Helmet>
+      </Helmet> */}
       <Navbar bg="dark" variant="dark" expand="lg" style={{ height: '125px' }}>
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
 
               {/* <h1>Popsiccle</h1> */}
-              <img src={Avatar} className="d-inline-block align-top" alt="WASD Logo" style={{ width: '250px', height: '50px' }} />{' '}
+              <img src={Avatar} className="d-inline-block align-top" alt="Popsiccle" style={{ width: '250px', height: '50px' }} />{' '}
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
