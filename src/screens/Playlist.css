@@ -1,0 +1,80 @@
+.playlist {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .playlist__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .playlist__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .playlist__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .playlist__label {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .playlist__input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .playlist__button {
+    padding: 0.5rem;
+    background-color: #0077ff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .playlist__button:hover {
+    background-color: #0058c8;
+  }
+  
+  .playlist__message {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: red;
+  }
+  
+  .playlist__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .playlist__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 0;
+  }
+  
+  .playlist__image {
+    height: 100%;
+    width: 80%;
+    margin-left: 1rem;
+  }
+  
+  .playlist__item:last-of-type {
+    border-bottom: none;
+  }
+  
