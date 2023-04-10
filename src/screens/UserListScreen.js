@@ -39,7 +39,7 @@ function UserListScreen({ history }) {
 
     return (
         <div>
-            <h1>Users</h1>
+            <h1>Listeners</h1>
             {loading
                 ? (<Loader />)
                 : error
@@ -48,7 +48,7 @@ function UserListScreen({ history }) {
                         <Table striped bordered hover responsive className='table-sm'>
                             <thead>
                                 <tr>
-                                    <th>ID</th>
+                                    {/* <th>ID</th> */}
                                     <th>NAME</th>
                                     <th>EMAIL</th>
                                     <th>ADMIN</th>
@@ -59,7 +59,7 @@ function UserListScreen({ history }) {
                             <tbody>
                                 {users.map(user => (
                                     <tr key={user._id}>
-                                        <td>{user._id}</td>
+                                        {/* <td>{user._id}</td> */}
                                         <td>{user.name}</td>
                                         <td>{user.email}</td>
                                         <td>{user.isAdmin ? (
