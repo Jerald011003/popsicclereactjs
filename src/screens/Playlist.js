@@ -100,7 +100,7 @@ const Playlist = ({ match, location, history }) => {
       <div className="playlist__message">{error}</div>
     ) : (
       <div>
-        <h2 className="playlist__title">Playlist List</h2>
+        <h2 className="playlist__title text-center">Playlists</h2>
         <ul className="playlist__list">
           {playlists.map((playlist) => (
             <li className="playlist__item" key={playlist.id}>

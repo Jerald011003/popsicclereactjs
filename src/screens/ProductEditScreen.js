@@ -140,7 +140,7 @@ function ProductEditScreen({ match, history }) {
             </Link>
 
             <FormContainer>
-                <h1>Edit Product</h1>
+                <h1>Edit Plan</h1>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
 
@@ -209,7 +209,7 @@ function ProductEditScreen({ match, history }) {
                                 </Form.Control>
                             </Form.Group>
 
-                            <Form.Group controlId='countinstock'>
+                            {/* <Form.Group controlId='countinstock'>
                                 <Form.Label>Stock</Form.Label>
                                 <Form.Control
 
@@ -219,7 +219,7 @@ function ProductEditScreen({ match, history }) {
                                     onChange={(e) => setCountInStock(e.target.value)}
                                 >
                                 </Form.Control>
-                            </Form.Group>
+                            </Form.Group> */}
 
                             <Form.Group controlId='category'>
                                 <Form.Label>Category</Form.Label>
@@ -246,7 +246,7 @@ function ProductEditScreen({ match, history }) {
                             </Form.Group>
 
                             
-                            <Form.Group controlId='download'>
+                            {/* <Form.Group controlId='download'>
                                 <Form.Label>Download</Form.Label>
                                 <Form.Control
 
@@ -266,9 +266,9 @@ function ProductEditScreen({ match, history }) {
 
                                 </Form.File>
                                 {uploadingDownload && <Loader />}
-                            </Form.Group>
+                            </Form.Group> */}
 
-                            <Form.Group controlId='watch'>
+                            {/* <Form.Group controlId='watch'>
                                 <Form.Label>Watch</Form.Label>
                                 <Form.Control
 
@@ -278,9 +278,9 @@ function ProductEditScreen({ match, history }) {
                                     onChange={(e) => setWatch(e.target.value)}
                                 >
                                 </Form.Control>
-                            </Form.Group>
+                            </Form.Group> */}
 
-                            <Form.Group controlId='preorderdate'>
+                            {/* <Form.Group controlId='preorderdate'>
     <Form.Label>Pre-order Date</Form.Label>
     <Form.Control
         type='date'
@@ -288,7 +288,7 @@ function ProductEditScreen({ match, history }) {
         value={preorderdate}
         onChange={(e) => setPreorder(e.target.value)}
     />
-</Form.Group>
+</Form.Group> */}
 
 
                             <Button type='submit' variant='primary'>

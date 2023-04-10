@@ -341,7 +341,7 @@ function SongScreen({ match, history}) {
     
     <div key={order.id}>
       <h1>
-        {order.isBasic && !showPremium && (
+        {order.isBasic && order.isBought && (
 
 <ListGroup.Item>
 <div className="text-center">
@@ -358,7 +358,7 @@ function SongScreen({ match, history}) {
       </h1>
 
       <h2>
-        {order.isPremium && (
+        {order.isPremium && order.isBought && (
           <div>
 
 <ListGroup.Item>

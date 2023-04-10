@@ -80,9 +80,10 @@ function ProfileScreen({ history }) {
         }
       };
     return (
-        <Row>
-            <Col md={3}>
-                <h2>User Profile</h2>
+<Row className="justify-content-center align-items-center">
+
+            <Col md={5}>
+                <h2>Edit Profile</h2>
 
                 {message && <Message variant='danger'>{message}</Message>}
                 {error && <Message variant='danger'>{error}</Message>}
@@ -145,7 +146,7 @@ function ProfileScreen({ history }) {
             </Col>
 
             <Col md={9}>
-                <h2>My Purchased Plans</h2>
+                <h2 className='text-center'>My Purchased Plans</h2>
                 {loadingOrders ? (
                     <Loader />
                 ) : errorOrders ? (
@@ -158,11 +159,11 @@ function ProfileScreen({ history }) {
                                         <th>Date</th>
                                         <th>Total</th>
                                         <th>Paid</th>
-                                        <th>Delivered</th>
-                                        <th>IsBasic</th>
-                                        <th>IsPremium</th>
+                                        <th>Details</th>
+                                        <th>Basic</th>
+                                        <th>Premium</th>
                                     
-                                        <th>IsBought</th>
+                                        {/* <th>IsBought</th> */}
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -176,12 +177,12 @@ function ProfileScreen({ history }) {
                                         <td>{order.isPaid ? order.paidAt.substring(0, 10) : <i className='fas fa-times' style={{ color: 'red' }}></i>}</td>
                                         <td>
                                           <LinkContainer to={`/order/${order._id}`}>
-                                            <Button className='btn-sm'>Details</Button>
+                                            <Button className='btn-sm'>Click To Pay</Button>
                                           </LinkContainer>
                                         </td>
                                         <td>{order.isBasic ? <i className='fas fa-check' style={{ color: 'green' }}></i> : <i className='fas fa-times' style={{ color: 'red' }}></i>}</td>
                                         <td>{order.isPremium ? <i className='fas fa-check' style={{ color: 'green' }}></i> : <i className='fas fa-times' style={{ color: 'red' }}></i>}</td>
-                                        <td>{order.isBought ? <i className='fas fa-check' style={{ color: 'green' }}></i> : <i className='fas fa-times' style={{ color: 'red' }}></i>}</td>
+                                        {/* <td>{order.isBought ? <i className='fas fa-check' style={{ color: 'green' }}></i> : <i className='fas fa-times' style={{ color: 'red' }}></i>}</td> */}
                                         <td>
         <Button
           className='btn-sm'

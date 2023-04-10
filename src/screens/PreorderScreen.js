@@ -49,7 +49,7 @@ const PlaylistScreen = ({ match, location, history }) => {
           {preorderItems.map((item) => (
             <Col key={item.song} xs={12} md={6} lg={4} className="mb-5">
               <div className="p-3 border rounded">
-                <Image src={item.image} alt={item.name} fluid />
+                <Image src={item.image} style={{ width: '250px', height: '250px', objectFit: 'cover' }}alt={item.name} fluid />
                 <div className="mt-3">
                   <Link to={`/songs/${item.song}`} className="fw-bold">
                     {item.name}

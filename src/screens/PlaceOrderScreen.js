@@ -53,7 +53,7 @@ function PlaceOrderScreen({ history }) {
                 <Col md={8}>
                     <ListGroup variant='flush'>
                         <ListGroup.Item>
-                            <h2>Contact</h2>
+                            {/* <h2>Contact</h2> */}
 
                             <p>
                                 <strong>Details: </strong>
@@ -146,7 +146,7 @@ function PlaceOrderScreen({ history }) {
                                 disabled={cart.cartItems.length === 0}
                                 onClick={placeOrder}
                             >
-                                Place Order
+                                Pay now!
                             </Button>
                         </ListGroup.Item>
                     </ListGroup>

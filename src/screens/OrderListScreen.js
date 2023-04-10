@@ -30,7 +30,7 @@ function OrderListScreen({ history }) {
 
     return (
         <div>
-            <h1>Orders</h1>
+            <h1>Plan Purchases</h1>
             {loading
                 ? (<Loader />)
                 : error
@@ -44,8 +44,8 @@ function OrderListScreen({ history }) {
                                     <th>DATE</th>
                                     <th>Total</th>
                                     <th>PAID</th>
-                                    <th>DELIVERED</th>
-                                    <th></th>
+                                    <th>BASIC</th>
+                                    <th>PREMIUM</th>
                                 </tr>
                             </thead>
 
@@ -60,14 +60,21 @@ function OrderListScreen({ history }) {
                                         <td>{order.isPaid ? (
                                             order.paidAt.substring(0, 10)
                                         ) : (
-                                                <i className='fas fa-check' style={{ color: 'red' }}></i>
+                                                <i className='fas fa-times' style={{ color: 'red' }}></i>
                                             )}
                                         </td>
 
-                                        <td>{order.isDelivered ? (
-                                            order.deliveredAt.substring(0, 10)
+                                        <td>{order.isBasic ? (
+                                            <i className='fas fa-check' style={{ color: 'green' }}></i>
                                         ) : (
-                                                <i className='fas fa-check' style={{ color: 'red' }}></i>
+                                                <i className='fas fa-times' style={{ color: 'red' }}></i>
+                                            )}
+                                        </td>
+
+                                        <td>{order.isPremium ? (
+                                            <i className='fas fa-check' style={{ color: 'green' }}></i>
+                                            ) : (
+                                                <i className='fas fa-times' style={{ color: 'red' }}></i>
                                             )}
                                         </td>
 

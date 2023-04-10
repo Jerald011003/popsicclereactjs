@@ -7,8 +7,9 @@ import { listSongs } from '../actions/songActions';
 import { useDispatch, useSelector } from 'react-redux';
 import Paginate from '../components/Paginate';
 import SongCarousel from '../components/SongCarousel';
-import SearchBox from '../components/SearchBox'; // import SearchBox component
-import '../styles/Header.css';
+import SearchBox from '../components/SearchBox';
+import '../styles/SongListScreen.css';
+import { Table } from 'react-bootstrap';
 
 function SongListScreen({ history }) {
   const dispatch = useDispatch();
@@ -31,28 +32,38 @@ function SongListScreen({ history }) {
   };
 
   return (
-    <div>
-      <SearchBox submitHandler={submitHandler} />
-      <br/>
+    <div className="song-list-container">
+      <div className="song-list-header">
+        <h1 className="song-list-title">Your Library</h1>
+        <div className="search-box-container">
+          <SearchBox submitHandler={submitHandler} />
+        </div>
+      </div>
       {!keyword && <SongCarousel />}
       {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">{error}</Message>
       ) : (
-        <div>
-          <Row>
-            {songs.map((song) => (
-              <Col key={song._id} sm={12} md={6} lg={5} xl={3}>
-                <Song song={song} />
-              </Col>
-            ))}
-          </Row>
+        <div className="song-list">
+           <Table striped bordered hover className="song-list-table">
+            <thead>
+              <tr>
+                <th>Album</th>
+                <th>Song Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              {songs.map((song) => (
+                <Song key={song._id} song={song} />
+              ))}
+            </tbody>
+          </Table>
           <Paginate
             page={page}
             pages={pages}
             keyword={keyword}
-            className="home-screen-pagination"
+            className="song-list-pagination"
           />
         </div>
       )}

@@ -180,15 +180,30 @@ function ProductScreen({ match, history }) {
             // type="button"
             disabled={order.isBought ? true : false} // set the disabled property based on order.isBought
           >
-            You are already in plan
+            
           </h4>
 
           <Button
           className='btn-sm'
+          style={{ backgroundColor: 'red', color: 'white' }}
+
           onClick={() => deleteOrderHandler(order._id)}
         >
-          Cancel
+          (Click to Cancel)
         </Button>
+    
+        
+       
+     
+                                            <LinkContainer to={`/order/${order._id}`}>
+                                                <Button className='btn-sm'           style={{ backgroundColor: 'green', color: 'white' }}
+>
+                                                    Details
+                                                </Button>
+                                            </LinkContainer>
+
+
+                                     
         </div>
       ))}
     </h1>

@@ -1,0 +1,13 @@
+.footer-logo {
+    height: 50px;
+  }
+  
+  .footer-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .footer-link:hover {
+    color: #1DB954;
+  }
+  

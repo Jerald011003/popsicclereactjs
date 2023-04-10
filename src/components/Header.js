@@ -47,7 +47,7 @@ function Header({ match, history}) {
             <Nav className="me-auto">
               <LinkContainer to="/">
                 <Nav.Link>
-                  <FaHome className="me-2" />
+                 
                   Listen Music
                 </Nav.Link>
               </LinkContainer>
@@ -56,7 +56,7 @@ function Header({ match, history}) {
   <LinkContainer to="/plan">
   <Nav.Link>
 
-      <FaFileInvoice className="me-2" />
+    
       Plan
       </Nav.Link>
 
@@ -65,7 +65,7 @@ function Header({ match, history}) {
 
 
 
-<NavDropdown title={<span><FaFileInvoice className="me-2" />Library</span>}> 
+<NavDropdown title={<span>Library</span>}> 
   <LinkContainer to="/liked">
     <NavDropdown.Item>
     <FontAwesomeIcon icon={faHeart} className="me-2" />      Liked Songs

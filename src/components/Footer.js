@@ -1,37 +1,37 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Footer.css';
+import Avatar from '../assets/POPSICCLE.png';
 
 function Footer() {
   return (
-    <footer className="bg-dark text-white">
-      <Container className="py-2">
-        <Row>
+    <footer className="bg-black text-white">
+      <Container className="py-5">
+        <Row className="align-items-center">
           <Col md={4} className="text-center">
-            <h5>Connect With Us</h5>
+            <h5>Connect with us</h5>
             <div className="d-flex justify-content-center">
               <a href="#" className="me-3 text-white">
-                <i className="fab fa-facebook fa-lg"></i>
-              </a>
+              <i className="fab fa-facebook fa-lg"></i>              </a>
               <a href="#" className="me-3 text-white">
-                <i className="fab fa-twitter fa-lg"></i>
-              </a>
+              <i className="fab fa-twitter fa-lg"></i>              </a>
               <a href="#" className="text-white">
-                <i className="fab fa-instagram fa-lg"></i>
+              <i className="fab fa-instagram fa-lg"></i>
               </a>
             </div>
           </Col>
           <Col md={4} className="text-center">
-            <h5>About Us</h5>
-            <p className="mb-0">
-              Popsiccle showcases music of all genres with features like download, create playlist, heart a song. etc.
-            </p>
-          </Col>
+  <a href="https://popsiccle-site.vercel.app/#/">
+    <img src={Avatar} alt="Popsiccle logo" className="footer-logo" />
+  </a>
+</Col>
+
           <Col md={4} className="text-center">
-            <h5>Contact Us</h5>
+          <h5>About</h5>
+
             <p className="mb-0">
-              Email: Popsiccle@gmail.com <br />
-              Phone: 1234567890
-          
+              Popsiccle showcases music of all genres with features like downloading, creating playlists, and favoriting songs.
             </p>
           </Col>
         </Row>
